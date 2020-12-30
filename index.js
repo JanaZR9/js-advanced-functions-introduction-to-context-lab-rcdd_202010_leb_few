@@ -1,4 +1,6 @@
 // Your code here
+
+//1
 function createEmployeeRecord(array){
  let employee={
     firstName:array[0],
@@ -8,14 +10,16 @@ function createEmployeeRecord(array){
     timeInEvents:[],
     timeOutEvents:[]
   }
-  return list;
+  return employee;
 }
 
-function createEmployeeRecords(array){
-let arr=array.map(element=>createEmployeeRecord(element));
+//2
+function createEmployeeRecords(array1){
+let arr=array1.map(el => createEmployeeRecord(el));
 return arr;
   }
 
+//3
 function createTimeInEvent(record,time){
   let object={};
     object.type="TimeIn";
