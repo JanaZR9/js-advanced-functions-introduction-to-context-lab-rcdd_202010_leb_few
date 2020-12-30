@@ -54,17 +54,8 @@ function hoursWorkedOnDate (record, time){
   function wagesEarnedOnDate(record,time){
   return parseInt(record.payPerHour)*hoursWorkedOnDate(record,time);
   }
-  function findEmployeeByFirstName(array2,name){
-  let result = array2.find((element) => element.firstName===name);
-  if(result)
-  return result;
-  else
-  undefined;
-  }
 
 //7
- 
-
   function allWagesFor (record){
     let dates = record.timeInEvents.map(function(i){
         return i.date;
@@ -77,6 +68,17 @@ function hoursWorkedOnDate (record, time){
     return pay;
 }
 
+//8
+function findEmployeeByFirstName(array2,name){
+  let result = array2.find((element) => element.firstName===name);
+  if(result)
+  return result;
+  else
+  undefined;
+  }
+ 
+
+//9
 function calculatePayroll (array){
  let grandTotalOwed = array.reduce((m, e) => m + allWagesFor(e), 0);
  return grandTotalOwed;
